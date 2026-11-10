@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neon-lime: #a3e635;
+  --color-neon-cyan: #22d3ee;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+  --bg: #050608;
+  --fg: #e4e4e7;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Fokus keyboard yang jelas di semua elemen interaktif. */
+:focus-visible {
+  outline: 2px solid var(--color-neon-lime);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+@utility card {
+  @apply rounded-2xl border border-white/10 bg-zinc-950/70 p-5 backdrop-blur;
+}
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold transition disabled:cursor-not-allowed disabled:opacity-50;
+}
+@utility btn-primary {
+  @apply btn bg-lime-400 text-black hover:bg-lime-300;
+}
+@utility btn-secondary {
+  @apply btn border border-white/15 bg-white/5 text-zinc-100 hover:bg-white/10;
+}
+@utility btn-danger {
+  @apply btn border border-red-500/40 bg-red-500/10 text-red-300 hover:bg-red-500/20;
+}
+@utility input {
+  @apply w-full rounded-xl border border-white/15 bg-zinc-900 px-3 py-2 text-sm text-zinc-100 placeholder:text-zinc-500 focus:border-lime-400;
+}
+@utility label {
+  @apply mb-1 block text-xs font-medium uppercase tracking-wide text-zinc-400;
+}
+@utility chip {
+  @apply inline-flex items-center rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 text-xs text-zinc-300;
+}
+
+/* Mode kurangi gerakan: matikan animasi & transisi CSS. */
+html.reduce-motion *,
+html.reduce-motion *::before,
+html.reduce-motion *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}

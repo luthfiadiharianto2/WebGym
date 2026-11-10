@@ -1,0 +1,13 @@
+node_modules
+.next
+out
+.env
+.env.local
+*.tsbuildinfo
+next-env.d.ts
+public/mediapipe/wasm
+public/models/*.task
+test-results
+playwright-report
+.claude/
+*.log

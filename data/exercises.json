@@ -1,0 +1,707 @@
+[
+  {
+    "id": "back_squat",
+    "name": { "id": "Back Squat", "en": "Back Squat" },
+    "description": { "id": "Squat dengan barbel di punggung atas, raja latihan kaki.", "en": "Squat with a barbell on the upper back — the king of leg training." },
+    "zone": "strength", "pattern": "squat", "animation": "squat",
+    "primaryMuscles": ["quads", "glutes"], "secondaryMuscles": ["hamstrings", "adductors", "lower_back", "abs"],
+    "equipment": ["barbell", "rack"], "level": "intermediate", "goals": ["strength", "hypertrophy"],
+    "commonMistakes": [
+      { "id": "Lutut masuk ke dalam (valgus)", "en": "Knees caving in (valgus)" },
+      { "id": "Tumit terangkat", "en": "Heels lifting" },
+      { "id": "Kurang dalam (di atas paralel)", "en": "Not deep enough (above parallel)" }
+    ],
+    "cues": [
+      { "id": "Dorong lutut searah jari kaki", "en": "Push knees out over toes" },
+      { "id": "Dada tegak, tahan napas di perut (bracing)", "en": "Chest up, brace your core" },
+      { "id": "Turun sampai paha minimal sejajar lantai", "en": "Descend until thighs are at least parallel" }
+    ],
+    "variations": ["goblet_squat", "bodyweight_squat", "bulgarian_split_squat"],
+    "contraindications": ["knee", "lower_back"], "tracking": "squat", "loadable": true
+  },
+  {
+    "id": "goblet_squat",
+    "name": { "id": "Goblet Squat", "en": "Goblet Squat" },
+    "description": { "id": "Squat sambil memeluk dumbel/kettlebell di depan dada. Ramah pemula dan bagus untuk mobilitas pinggul.", "en": "Squat holding a dumbbell/kettlebell at the chest. Beginner friendly and great for hip mobility." },
+    "zone": "functional", "pattern": "squat", "animation": "squat",
+    "primaryMuscles": ["quads", "glutes"], "secondaryMuscles": ["abs", "adductors", "upper_back"],
+    "equipment": ["dumbbell", "kettlebell"], "level": "beginner", "goals": ["hypertrophy", "fat_loss", "endurance"],
+    "commonMistakes": [
+      { "id": "Siku tidak di dalam lutut", "en": "Elbows not inside the knees" },
+      { "id": "Punggung membungkuk", "en": "Rounding the back" }
+    ],
+    "cues": [
+      { "id": "Siku mendorong lutut keluar di posisi bawah", "en": "Use elbows to pry knees out at the bottom" },
+      { "id": "Beban dekat dengan dada", "en": "Keep the weight close to your chest" }
+    ],
+    "variations": ["back_squat", "bodyweight_squat"],
+    "contraindications": ["knee"], "tracking": "squat", "loadable": true
+  },
+  {
+    "id": "bodyweight_squat",
+    "name": { "id": "Squat Berat Badan", "en": "Bodyweight Squat" },
+    "description": { "id": "Squat tanpa beban untuk belajar pola gerak dan pemanasan.", "en": "Unloaded squat for learning the pattern and warming up." },
+    "zone": "functional", "pattern": "squat", "animation": "squat",
+    "primaryMuscles": ["quads", "glutes"], "secondaryMuscles": ["hamstrings", "abs"],
+    "equipment": ["bodyweight"], "level": "beginner", "goals": ["endurance", "fat_loss", "hypertrophy"],
+    "commonMistakes": [
+      { "id": "Lutut masuk ke dalam", "en": "Knees caving in" },
+      { "id": "Badan terlalu condong ke depan", "en": "Leaning too far forward" }
+    ],
+    "cues": [
+      { "id": "Duduk ke belakang seperti ke kursi", "en": "Sit back as if onto a chair" },
+      { "id": "Berat badan di tengah kaki", "en": "Keep weight mid-foot" }
+    ],
+    "variations": ["goblet_squat", "back_squat"],
+    "contraindications": [], "tracking": "squat"
+  },
+  {
+    "id": "deadlift",
+    "name": { "id": "Deadlift", "en": "Deadlift" },
+    "description": { "id": "Mengangkat barbel dari lantai dengan pola hip hinge.", "en": "Lifting a barbell from the floor with a hip-hinge pattern." },
+    "zone": "strength", "pattern": "hinge", "animation": "hinge",
+    "primaryMuscles": ["hamstrings", "glutes", "lower_back"], "secondaryMuscles": ["upper_back", "forearms", "quads", "lats"],
+    "equipment": ["barbell"], "level": "intermediate", "goals": ["strength", "hypertrophy"],
+    "commonMistakes": [
+      { "id": "Punggung bawah membungkuk", "en": "Lower back rounding" },
+      { "id": "Barbel jauh dari tubuh", "en": "Bar drifting away from the body" },
+      { "id": "Pinggul naik lebih dulu", "en": "Hips shooting up first" }
+    ],
+    "cues": [
+      { "id": "Barbel menempel di tulang kering", "en": "Keep the bar close to your shins" },
+      { "id": "Dorong lantai, kunci pinggul di atas", "en": "Push the floor away, lock hips at the top" },
+      { "id": "Ketiak 'menjepit' — aktifkan lat", "en": "Squeeze your armpits — engage the lats" }
+    ],
+    "variations": ["romanian_deadlift", "kettlebell_swing", "hip_thrust"],
+    "contraindications": ["lower_back"], "tracking": "hinge", "loadable": true
+  },
+  {
+    "id": "romanian_deadlift",
+    "name": { "id": "Romanian Deadlift", "en": "Romanian Deadlift" },
+    "description": { "id": "Hip hinge dengan lutut sedikit ditekuk, fokus pada hamstring.", "en": "Hip hinge with soft knees, focused on the hamstrings." },
+    "zone": "strength", "pattern": "hinge", "animation": "hinge",
+    "primaryMuscles": ["hamstrings", "glutes"], "secondaryMuscles": ["lower_back", "forearms"],
+    "equipment": ["barbell", "dumbbell"], "level": "intermediate", "goals": ["hypertrophy", "strength"],
+    "commonMistakes": [
+      { "id": "Menekuk lutut terlalu banyak (jadi squat)", "en": "Bending the knees too much (turning it into a squat)" },
+      { "id": "Punggung membulat", "en": "Rounded back" }
+    ],
+    "cues": [
+      { "id": "Dorong pinggul ke belakang", "en": "Push your hips back" },
+      { "id": "Rasakan tarikan di hamstring", "en": "Feel the stretch in your hamstrings" }
+    ],
+    "variations": ["deadlift", "glute_bridge"],
+    "contraindications": ["lower_back"], "tracking": "hinge", "loadable": true
+  },
+  {
+    "id": "bench_press",
+    "name": { "id": "Bench Press", "en": "Bench Press" },
+    "description": { "id": "Menekan barbel dari dada sambil berbaring di bench.", "en": "Pressing a barbell from the chest while lying on a bench." },
+    "zone": "strength", "pattern": "horizontal_push", "animation": "bench",
+    "primaryMuscles": ["chest"], "secondaryMuscles": ["triceps", "front_delts"],
+    "equipment": ["barbell", "bench", "rack"], "level": "intermediate", "goals": ["strength", "hypertrophy"],
+    "commonMistakes": [
+      { "id": "Siku terlalu melebar 90°", "en": "Elbows flared to 90°" },
+      { "id": "Pantat terangkat dari bench", "en": "Butt lifting off the bench" }
+    ],
+    "cues": [
+      { "id": "Tarik tulang belikat ke belakang-bawah", "en": "Pull shoulder blades back and down" },
+      { "id": "Siku ±45–70° dari badan", "en": "Elbows ~45–70° from the torso" }
+    ],
+    "variations": ["dumbbell_bench_press", "push_up"],
+    "contraindications": ["shoulder", "wrist"], "loadable": true
+  },
+  {
+    "id": "dumbbell_bench_press",
+    "name": { "id": "Dumbbell Bench Press", "en": "Dumbbell Bench Press" },
+    "description": { "id": "Bench press dengan dua dumbel, rentang gerak lebih bebas.", "en": "Bench press with two dumbbells for a freer range of motion." },
+    "zone": "strength", "pattern": "horizontal_push", "animation": "bench",
+    "primaryMuscles": ["chest"], "secondaryMuscles": ["triceps", "front_delts"],
+    "equipment": ["dumbbell", "bench"], "level": "beginner", "goals": ["hypertrophy", "strength"],
+    "commonMistakes": [
+      { "id": "Dumbel saling membentur di atas", "en": "Clanking dumbbells at the top" },
+      { "id": "Turun terlalu cepat", "en": "Lowering too fast" }
+    ],
+    "cues": [
+      { "id": "Turun terkontrol 2–3 detik", "en": "Lower under control for 2–3 seconds" },
+      { "id": "Pergelangan lurus di atas siku", "en": "Wrists stacked over elbows" }
+    ],
+    "variations": ["bench_press", "push_up"],
+    "contraindications": ["shoulder"], "loadable": true
+  },
+  {
+    "id": "push_up",
+    "name": { "id": "Push-up", "en": "Push-up" },
+    "description": { "id": "Latihan dorong dengan berat badan untuk dada, bahu, dan trisep.", "en": "Bodyweight push for chest, shoulders and triceps." },
+    "zone": "functional", "pattern": "horizontal_push", "animation": "pushup",
+    "primaryMuscles": ["chest", "triceps"], "secondaryMuscles": ["front_delts", "abs"],
+    "equipment": ["bodyweight"], "level": "beginner", "goals": ["endurance", "hypertrophy", "fat_loss"],
+    "commonMistakes": [
+      { "id": "Pinggul turun (melengkung)", "en": "Hips sagging" },
+      { "id": "Hanya turun setengah", "en": "Half reps" }
+    ],
+    "cues": [
+      { "id": "Badan lurus seperti papan dari kepala ke tumit", "en": "Body straight like a plank from head to heels" },
+      { "id": "Dada hampir menyentuh lantai", "en": "Chest nearly touches the floor" }
+    ],
+    "variations": ["bench_press", "plank"],
+    "contraindications": ["wrist", "shoulder"], "tracking": "pushup"
+  },
+  {
+    "id": "overhead_press",
+    "name": { "id": "Overhead Press", "en": "Overhead Press" },
+    "description": { "id": "Menekan barbel dari bahu ke atas kepala sambil berdiri.", "en": "Pressing a barbell from the shoulders overhead while standing." },
+    "zone": "strength", "pattern": "vertical_push", "animation": "ohp",
+    "primaryMuscles": ["front_delts", "side_delts"], "secondaryMuscles": ["triceps", "upper_back", "abs"],
+    "equipment": ["barbell", "rack"], "level": "intermediate", "goals": ["strength", "hypertrophy"],
+    "commonMistakes": [
+      { "id": "Punggung bawah melengkung ke belakang", "en": "Excessive lower-back arch" },
+      { "id": "Lengan tidak terkunci penuh di atas", "en": "Not locking out overhead" }
+    ],
+    "cues": [
+      { "id": "Kencangkan bokong dan perut", "en": "Squeeze glutes and abs" },
+      { "id": "Kepala 'masuk' di bawah barbel saat lockout", "en": "Push your head through at lockout" }
+    ],
+    "variations": ["dumbbell_shoulder_press", "lateral_raise"],
+    "contraindications": ["shoulder", "lower_back"], "tracking": "ohp", "loadable": true
+  },
+  {
+    "id": "dumbbell_shoulder_press",
+    "name": { "id": "Dumbbell Shoulder Press", "en": "Dumbbell Shoulder Press" },
+    "description": { "id": "Press bahu dengan dumbel, bisa duduk atau berdiri.", "en": "Shoulder press with dumbbells, seated or standing." },
+    "zone": "strength", "pattern": "vertical_push", "animation": "ohp",
+    "primaryMuscles": ["front_delts", "side_delts"], "secondaryMuscles": ["triceps"],
+    "equipment": ["dumbbell"], "level": "beginner", "goals": ["hypertrophy", "strength"],
+    "commonMistakes": [
+      { "id": "Siku turun terlalu rendah dengan bahu terangkat", "en": "Shrugging while lowering too deep" },
+      { "id": "Gerakan tidak simetris kiri-kanan", "en": "Uneven left–right press" }
+    ],
+    "cues": [
+      { "id": "Siku sedikit di depan badan", "en": "Elbows slightly in front of the torso" },
+      { "id": "Tekan lurus ke atas", "en": "Press straight up" }
+    ],
+    "variations": ["overhead_press", "lateral_raise"],
+    "contraindications": ["shoulder"], "tracking": "ohp", "loadable": true
+  },
+  {
+    "id": "barbell_row",
+    "name": { "id": "Barbell Row", "en": "Barbell Row" },
+    "description": { "id": "Menarik barbel ke perut dengan badan condong (hinge).", "en": "Rowing a barbell to the belly from a hinged position." },
+    "zone": "strength", "pattern": "horizontal_pull", "animation": "row",
+    "primaryMuscles": ["upper_back", "lats"], "secondaryMuscles": ["biceps", "rear_delts", "lower_back"],
+    "equipment": ["barbell"], "level": "intermediate", "goals": ["strength", "hypertrophy"],
+    "commonMistakes": [
+      { "id": "Badan naik-turun (momentum)", "en": "Torso bouncing (momentum)" },
+      { "id": "Punggung membulat", "en": "Rounded back" }
+    ],
+    "cues": [
+      { "id": "Tarik siku ke arah pinggul", "en": "Drive elbows toward your hips" },
+      { "id": "Jaga sudut badan tetap", "en": "Keep the torso angle fixed" }
+    ],
+    "variations": ["dumbbell_row", "lat_pulldown"],
+    "contraindications": ["lower_back"], "tracking": "row", "loadable": true
+  },
+  {
+    "id": "dumbbell_row",
+    "name": { "id": "Single-Arm Dumbbell Row", "en": "Single-Arm Dumbbell Row" },
+    "description": { "id": "Row satu tangan bertumpu pada bench — bagus untuk memperbaiki ketidakseimbangan kiri-kanan.", "en": "One-arm row supported on a bench — great for fixing left/right imbalances." },
+    "zone": "strength", "pattern": "horizontal_pull", "animation": "row",
+    "primaryMuscles": ["lats", "upper_back"], "secondaryMuscles": ["biceps", "rear_delts"],
+    "equipment": ["dumbbell", "bench"], "level": "beginner", "goals": ["hypertrophy", "strength"],
+    "commonMistakes": [
+      { "id": "Memutar badan saat menarik", "en": "Rotating the torso while pulling" },
+      { "id": "Menarik dengan bisep saja", "en": "Pulling only with the biceps" }
+    ],
+    "cues": [
+      { "id": "Bahu sejajar lantai", "en": "Keep shoulders square to the floor" },
+      { "id": "Tarik dumbel ke saku celana", "en": "Pull the dumbbell to your hip pocket" }
+    ],
+    "variations": ["barbell_row", "band_pull_apart"],
+    "contraindications": [], "tracking": "row", "unilateral": true, "loadable": true
+  },
+  {
+    "id": "pull_up",
+    "name": { "id": "Pull-up", "en": "Pull-up" },
+    "description": { "id": "Menarik badan ke atas palang hingga dagu melewati palang.", "en": "Pull your body up until your chin clears the bar." },
+    "zone": "functional", "pattern": "vertical_pull", "animation": "pullup",
+    "primaryMuscles": ["lats", "upper_back"], "secondaryMuscles": ["biceps", "forearms", "abs"],
+    "equipment": ["pullup_bar"], "level": "advanced", "goals": ["strength", "hypertrophy"],
+    "commonMistakes": [
+      { "id": "Mengayun (kipping) tanpa kontrol", "en": "Uncontrolled kipping" },
+      { "id": "Tidak turun hingga lengan lurus", "en": "Not reaching full arm extension" }
+    ],
+    "cues": [
+      { "id": "Mulai dengan menarik bahu ke bawah", "en": "Initiate by pulling shoulders down" },
+      { "id": "Dada menuju palang", "en": "Bring chest to the bar" }
+    ],
+    "variations": ["lat_pulldown", "dumbbell_row"],
+    "contraindications": ["shoulder", "elbow"]
+  },
+  {
+    "id": "lat_pulldown",
+    "name": { "id": "Lat Pulldown", "en": "Lat Pulldown" },
+    "description": { "id": "Menarik bar kabel ke dada atas dalam posisi duduk.", "en": "Pulling a cable bar to the upper chest while seated." },
+    "zone": "strength", "pattern": "vertical_pull", "animation": "pullup",
+    "primaryMuscles": ["lats"], "secondaryMuscles": ["biceps", "upper_back", "rear_delts"],
+    "equipment": ["cable"], "level": "beginner", "goals": ["hypertrophy", "strength"],
+    "commonMistakes": [
+      { "id": "Bersandar terlalu jauh ke belakang", "en": "Leaning too far back" },
+      { "id": "Menarik bar ke belakang leher", "en": "Pulling behind the neck" }
+    ],
+    "cues": [
+      { "id": "Tarik ke dada atas", "en": "Pull to the upper chest" },
+      { "id": "Kontrol saat naik", "en": "Control the way up" }
+    ],
+    "variations": ["pull_up", "dumbbell_row"],
+    "contraindications": ["shoulder"], "loadable": true
+  },
+  {
+    "id": "plank",
+    "name": { "id": "Plank", "en": "Plank" },
+    "description": { "id": "Menahan posisi papan dengan bertumpu pada lengan bawah.", "en": "Holding a straight body position on your forearms." },
+    "zone": "functional", "pattern": "core", "animation": "plank",
+    "primaryMuscles": ["abs"], "secondaryMuscles": ["obliques", "front_delts", "glutes"],
+    "equipment": ["bodyweight", "mat"], "level": "beginner", "goals": ["endurance", "fat_loss", "strength"],
+    "commonMistakes": [
+      { "id": "Pinggul turun", "en": "Hips sagging" },
+      { "id": "Pinggul terlalu tinggi", "en": "Hips piking up" }
+    ],
+    "cues": [
+      { "id": "Kencangkan bokong, tarik pusar", "en": "Squeeze glutes, pull belly button in" },
+      { "id": "Leher netral, pandang lantai", "en": "Neutral neck, look at the floor" }
+    ],
+    "variations": ["side_plank", "dead_bug", "mountain_climber"],
+    "contraindications": [], "tracking": "plank", "timed": true
+  },
+  {
+    "id": "side_plank",
+    "name": { "id": "Side Plank", "en": "Side Plank" },
+    "description": { "id": "Plank menyamping untuk otot obliques dan stabilitas panggul.", "en": "Sideways plank for the obliques and hip stability." },
+    "zone": "functional", "pattern": "core", "animation": "side_plank",
+    "primaryMuscles": ["obliques"], "secondaryMuscles": ["abs", "glutes", "side_delts"],
+    "equipment": ["bodyweight", "mat"], "level": "beginner", "goals": ["endurance", "strength"],
+    "commonMistakes": [
+      { "id": "Pinggul jatuh ke lantai", "en": "Hips dropping" },
+      { "id": "Badan berputar ke depan", "en": "Rolling forward" }
+    ],
+    "cues": [
+      { "id": "Garis lurus dari kepala ke kaki", "en": "Straight line from head to feet" },
+      { "id": "Siku tepat di bawah bahu", "en": "Elbow directly under the shoulder" }
+    ],
+    "variations": ["plank", "bird_dog"],
+    "contraindications": ["shoulder"], "timed": true, "unilateral": true
+  },
+  {
+    "id": "lunge",
+    "name": { "id": "Lunge", "en": "Lunge" },
+    "description": { "id": "Melangkah ke depan dan menurunkan lutut belakang mendekati lantai.", "en": "Step forward and lower the back knee toward the floor." },
+    "zone": "functional", "pattern": "lunge", "animation": "lunge",
+    "primaryMuscles": ["quads", "glutes"], "secondaryMuscles": ["hamstrings", "adductors", "calves"],
+    "equipment": ["bodyweight", "dumbbell"], "level": "beginner", "goals": ["hypertrophy", "endurance", "fat_loss"],
+    "commonMistakes": [
+      { "id": "Lutut depan masuk ke dalam", "en": "Front knee caving in" },
+      { "id": "Badan condong ke depan berlebihan", "en": "Excessive forward lean" }
+    ],
+    "cues": [
+      { "id": "Badan tegak, turun lurus ke bawah", "en": "Stay tall and drop straight down" },
+      { "id": "Kedua lutut ±90°", "en": "Both knees around 90°" }
+    ],
+    "variations": ["bulgarian_split_squat", "goblet_squat"],
+    "contraindications": ["knee"], "tracking": "lunge", "unilateral": true, "loadable": true
+  },
+  {
+    "id": "bulgarian_split_squat",
+    "name": { "id": "Bulgarian Split Squat", "en": "Bulgarian Split Squat" },
+    "description": { "id": "Split squat dengan kaki belakang di atas bench.", "en": "Split squat with the rear foot elevated on a bench." },
+    "zone": "strength", "pattern": "lunge", "animation": "split_squat",
+    "primaryMuscles": ["quads", "glutes"], "secondaryMuscles": ["adductors", "hamstrings"],
+    "equipment": ["bench", "dumbbell"], "level": "intermediate", "goals": ["hypertrophy", "strength"],
+    "commonMistakes": [
+      { "id": "Kaki depan terlalu dekat dengan bench", "en": "Front foot too close to the bench" },
+      { "id": "Kehilangan keseimbangan", "en": "Losing balance" }
+    ],
+    "cues": [
+      { "id": "Sebagian besar beban di kaki depan", "en": "Most weight on the front leg" },
+      { "id": "Turun terkontrol", "en": "Lower under control" }
+    ],
+    "variations": ["lunge", "back_squat"],
+    "contraindications": ["knee"], "tracking": "lunge", "unilateral": true, "loadable": true
+  },
+  {
+    "id": "bicep_curl",
+    "name": { "id": "Bicep Curl", "en": "Bicep Curl" },
+    "description": { "id": "Menekuk siku sambil memegang dumbel untuk melatih bisep.", "en": "Flexing the elbows holding dumbbells to train the biceps." },
+    "zone": "strength", "pattern": "arms", "animation": "curl",
+    "primaryMuscles": ["biceps"], "secondaryMuscles": ["forearms"],
+    "equipment": ["dumbbell", "barbell"], "level": "beginner", "goals": ["hypertrophy"],
+    "commonMistakes": [
+      { "id": "Siku bergeser ke depan", "en": "Elbows drifting forward" },
+      { "id": "Mengayun badan", "en": "Swinging the torso" }
+    ],
+    "cues": [
+      { "id": "Kunci siku di samping badan", "en": "Pin elbows to your sides" },
+      { "id": "Turunkan perlahan hingga lengan lurus", "en": "Lower slowly to full extension" }
+    ],
+    "variations": ["hammer_curl"],
+    "contraindications": ["elbow"], "tracking": "curl", "loadable": true
+  },
+  {
+    "id": "hammer_curl",
+    "name": { "id": "Hammer Curl", "en": "Hammer Curl" },
+    "description": { "id": "Curl dengan genggaman netral untuk bisep dan brachioradialis.", "en": "Neutral-grip curl for the biceps and brachioradialis." },
+    "zone": "strength", "pattern": "arms", "animation": "curl",
+    "primaryMuscles": ["biceps", "forearms"], "secondaryMuscles": [],
+    "equipment": ["dumbbell"], "level": "beginner", "goals": ["hypertrophy"],
+    "commonMistakes": [
+      { "id": "Menggunakan momentum", "en": "Using momentum" },
+      { "id": "Pergelangan menekuk", "en": "Bending the wrists" }
+    ],
+    "cues": [
+      { "id": "Ibu jari menghadap ke atas", "en": "Thumbs facing up" },
+      { "id": "Siku diam", "en": "Keep elbows still" }
+    ],
+    "variations": ["bicep_curl"],
+    "contraindications": ["elbow"], "tracking": "curl", "loadable": true
+  },
+  {
+    "id": "tricep_dip",
+    "name": { "id": "Bench Dip", "en": "Bench Dip" },
+    "description": { "id": "Dip dengan tangan bertumpu di bench untuk trisep.", "en": "Dips with hands on a bench to train the triceps." },
+    "zone": "functional", "pattern": "arms", "animation": "dip",
+    "primaryMuscles": ["triceps"], "secondaryMuscles": ["chest", "front_delts"],
+    "equipment": ["bench", "bodyweight"], "level": "beginner", "goals": ["hypertrophy", "endurance"],
+    "commonMistakes": [
+      { "id": "Turun terlalu dalam (bahu tertekan)", "en": "Going too deep (stressing the shoulders)" },
+      { "id": "Bahu terangkat ke telinga", "en": "Shrugging toward the ears" }
+    ],
+    "cues": [
+      { "id": "Turun sampai siku ±90°", "en": "Lower until elbows reach ~90°" },
+      { "id": "Punggung dekat dengan bench", "en": "Keep your back close to the bench" }
+    ],
+    "variations": ["overhead_tricep_extension", "push_up"],
+    "contraindications": ["shoulder", "wrist"]
+  },
+  {
+    "id": "overhead_tricep_extension",
+    "name": { "id": "Overhead Tricep Extension", "en": "Overhead Tricep Extension" },
+    "description": { "id": "Ekstensi siku dengan dumbel di atas kepala.", "en": "Elbow extension with a dumbbell overhead." },
+    "zone": "strength", "pattern": "arms", "animation": "tricep_ext",
+    "primaryMuscles": ["triceps"], "secondaryMuscles": ["abs"],
+    "equipment": ["dumbbell", "cable"], "level": "beginner", "goals": ["hypertrophy"],
+    "commonMistakes": [
+      { "id": "Siku melebar ke samping", "en": "Elbows flaring out" },
+      { "id": "Punggung melengkung", "en": "Arching the back" }
+    ],
+    "cues": [
+      { "id": "Siku menunjuk ke depan/atas", "en": "Elbows point forward/up" },
+      { "id": "Hanya lengan bawah yang bergerak", "en": "Only the forearms move" }
+    ],
+    "variations": ["tricep_dip"],
+    "contraindications": ["elbow", "shoulder"], "tracking": "tricep_ext", "loadable": true
+  },
+  {
+    "id": "lateral_raise",
+    "name": { "id": "Lateral Raise", "en": "Lateral Raise" },
+    "description": { "id": "Mengangkat dumbel ke samping hingga setinggi bahu.", "en": "Raising dumbbells out to the sides to shoulder height." },
+    "zone": "strength", "pattern": "shoulders", "animation": "lateral_raise",
+    "primaryMuscles": ["side_delts"], "secondaryMuscles": ["front_delts", "upper_back"],
+    "equipment": ["dumbbell", "cable", "band"], "level": "beginner", "goals": ["hypertrophy"],
+    "commonMistakes": [
+      { "id": "Mengangkat bahu (shrug)", "en": "Shrugging" },
+      { "id": "Mengangkat terlalu tinggi di atas bahu", "en": "Raising far above shoulder height" }
+    ],
+    "cues": [
+      { "id": "Pimpin dengan siku", "en": "Lead with the elbows" },
+      { "id": "Berhenti setinggi bahu", "en": "Stop at shoulder height" }
+    ],
+    "variations": ["dumbbell_shoulder_press"],
+    "contraindications": ["shoulder"], "tracking": "lateral_raise", "loadable": true
+  },
+  {
+    "id": "glute_bridge",
+    "name": { "id": "Glute Bridge", "en": "Glute Bridge" },
+    "description": { "id": "Mengangkat pinggul dari posisi telentang untuk mengaktifkan bokong.", "en": "Lifting the hips from a supine position to activate the glutes." },
+    "zone": "functional", "pattern": "hinge", "animation": "bridge",
+    "primaryMuscles": ["glutes"], "secondaryMuscles": ["hamstrings", "abs"],
+    "equipment": ["bodyweight", "mat"], "level": "beginner", "goals": ["hypertrophy", "endurance"],
+    "commonMistakes": [
+      { "id": "Punggung bawah melengkung berlebihan", "en": "Over-arching the lower back" },
+      { "id": "Lutut terbuka/masuk", "en": "Knees flaring or caving" }
+    ],
+    "cues": [
+      { "id": "Dorong tumit, remas bokong di atas", "en": "Drive through heels, squeeze glutes at the top" },
+      { "id": "Rusuk tetap turun", "en": "Keep ribs down" }
+    ],
+    "variations": ["hip_thrust", "romanian_deadlift"],
+    "contraindications": [], "tracking": "bridge"
+  },
+  {
+    "id": "hip_thrust",
+    "name": { "id": "Hip Thrust", "en": "Hip Thrust" },
+    "description": { "id": "Bridge dengan punggung atas di bench dan beban di pinggul.", "en": "Bridge with upper back on a bench and load across the hips." },
+    "zone": "strength", "pattern": "hinge", "animation": "bridge",
+    "primaryMuscles": ["glutes"], "secondaryMuscles": ["hamstrings", "quads"],
+    "equipment": ["barbell", "bench"], "level": "intermediate", "goals": ["hypertrophy", "strength"],
+    "commonMistakes": [
+      { "id": "Hiperekstensi punggung bawah", "en": "Hyperextending the lower back" },
+      { "id": "Dagu mendongak", "en": "Looking up at the ceiling" }
+    ],
+    "cues": [
+      { "id": "Dagu sedikit ditekuk, pandang ke depan", "en": "Tuck chin slightly, look forward" },
+      { "id": "Tulang kering vertikal di atas", "en": "Shins vertical at the top" }
+    ],
+    "variations": ["glute_bridge"],
+    "contraindications": ["lower_back"], "tracking": "bridge", "loadable": true
+  },
+  {
+    "id": "kettlebell_swing",
+    "name": { "id": "Kettlebell Swing", "en": "Kettlebell Swing" },
+    "description": { "id": "Ayunan kettlebell eksplosif berbasis hip hinge.", "en": "Explosive kettlebell swing driven by the hip hinge." },
+    "zone": "functional", "pattern": "hinge", "animation": "swing",
+    "primaryMuscles": ["glutes", "hamstrings"], "secondaryMuscles": ["lower_back", "abs", "forearms", "front_delts"],
+    "equipment": ["kettlebell"], "level": "intermediate", "goals": ["fat_loss", "endurance", "strength"],
+    "commonMistakes": [
+      { "id": "Mengangkat dengan lengan", "en": "Lifting with the arms" },
+      { "id": "Melakukan squat, bukan hinge", "en": "Squatting instead of hinging" }
+    ],
+    "cues": [
+      { "id": "Hentakan pinggul yang mengayunkan beban", "en": "Snap the hips to float the bell" },
+      { "id": "Lengan seperti tali", "en": "Arms like ropes" }
+    ],
+    "variations": ["deadlift", "glute_bridge"],
+    "contraindications": ["lower_back"], "tracking": "hinge", "loadable": true
+  },
+  {
+    "id": "mountain_climber",
+    "name": { "id": "Mountain Climber", "en": "Mountain Climber" },
+    "description": { "id": "Lari di tempat dalam posisi plank tinggi.", "en": "Running in place from a high plank." },
+    "zone": "cardio", "pattern": "conditioning", "animation": "mountain_climber",
+    "primaryMuscles": ["abs", "hip_flexors"], "secondaryMuscles": ["front_delts", "quads", "obliques"],
+    "equipment": ["bodyweight"], "level": "beginner", "goals": ["fat_loss", "endurance"],
+    "commonMistakes": [
+      { "id": "Pinggul terlalu tinggi", "en": "Hips too high" },
+      { "id": "Bahu jauh di belakang tangan", "en": "Shoulders behind the hands" }
+    ],
+    "cues": [
+      { "id": "Bahu di atas pergelangan", "en": "Shoulders over wrists" },
+      { "id": "Lutut ke arah dada bergantian", "en": "Alternate knees toward the chest" }
+    ],
+    "variations": ["plank", "burpee"],
+    "contraindications": ["wrist"]
+  },
+  {
+    "id": "burpee",
+    "name": { "id": "Burpee", "en": "Burpee" },
+    "description": { "id": "Gabungan squat, plank, dan lompatan — latihan kardio seluruh tubuh.", "en": "Squat, plank and jump combined — a full-body cardio move." },
+    "zone": "cardio", "pattern": "conditioning", "animation": "burpee",
+    "primaryMuscles": ["quads", "chest"], "secondaryMuscles": ["abs", "triceps", "glutes", "calves"],
+    "equipment": ["bodyweight"], "level": "intermediate", "goals": ["fat_loss", "endurance"],
+    "commonMistakes": [
+      { "id": "Punggung melengkung saat posisi plank", "en": "Sagging back in the plank phase" },
+      { "id": "Mendarat dengan lutut terkunci", "en": "Landing with locked knees" }
+    ],
+    "cues": [
+      { "id": "Mendarat lembut", "en": "Land softly" },
+      { "id": "Jaga ritme konsisten", "en": "Keep a steady rhythm" }
+    ],
+    "variations": ["mountain_climber", "jumping_jack"],
+    "contraindications": ["knee", "wrist", "lower_back"]
+  },
+  {
+    "id": "jumping_jack",
+    "name": { "id": "Jumping Jack", "en": "Jumping Jack" },
+    "description": { "id": "Lompatan membuka-menutup kaki dan tangan untuk pemanasan/kardio.", "en": "Opening-closing jumps for warm-up or cardio." },
+    "zone": "cardio", "pattern": "conditioning", "animation": "jumping_jack",
+    "primaryMuscles": ["calves", "side_delts"], "secondaryMuscles": ["adductors", "glutes"],
+    "equipment": ["bodyweight"], "level": "beginner", "goals": ["fat_loss", "endurance"],
+    "commonMistakes": [
+      { "id": "Tangan tidak sampai atas kepala", "en": "Hands not reaching overhead" },
+      { "id": "Mendarat dengan tumit keras", "en": "Landing hard on the heels" }
+    ],
+    "cues": [
+      { "id": "Mendarat di ujung kaki", "en": "Land on the balls of your feet" },
+      { "id": "Gerakan tangan penuh", "en": "Full arm range" }
+    ],
+    "variations": ["burpee"],
+    "contraindications": ["knee", "ankle"], "tracking": "jumping_jack"
+  },
+  {
+    "id": "treadmill_run",
+    "name": { "id": "Lari di Treadmill", "en": "Treadmill Run" },
+    "description": { "id": "Lari atau jalan cepat di treadmill untuk daya tahan kardio.", "en": "Running or brisk walking on a treadmill for cardio endurance." },
+    "zone": "cardio", "pattern": "conditioning", "animation": "run",
+    "primaryMuscles": ["quads", "calves"], "secondaryMuscles": ["hamstrings", "glutes", "hip_flexors"],
+    "equipment": ["treadmill"], "level": "beginner", "goals": ["endurance", "fat_loss"],
+    "commonMistakes": [
+      { "id": "Langkah terlalu panjang (overstriding)", "en": "Overstriding" },
+      { "id": "Berpegangan pada pegangan", "en": "Holding on to the handrails" }
+    ],
+    "cues": [
+      { "id": "Kaki mendarat di bawah pinggul", "en": "Land with feet under your hips" },
+      { "id": "Bahu rileks", "en": "Relax your shoulders" }
+    ],
+    "variations": ["jumping_jack"],
+    "contraindications": ["knee", "ankle"], "timed": true
+  },
+  {
+    "id": "calf_raise",
+    "name": { "id": "Calf Raise", "en": "Calf Raise" },
+    "description": { "id": "Berjinjit untuk melatih otot betis.", "en": "Rising onto the toes to train the calves." },
+    "zone": "strength", "pattern": "calves", "animation": "calf_raise",
+    "primaryMuscles": ["calves"], "secondaryMuscles": [],
+    "equipment": ["bodyweight", "dumbbell"], "level": "beginner", "goals": ["hypertrophy", "endurance"],
+    "commonMistakes": [
+      { "id": "Memantul tanpa jeda", "en": "Bouncing without a pause" },
+      { "id": "Rentang gerak pendek", "en": "Short range of motion" }
+    ],
+    "cues": [
+      { "id": "Jeda 1 detik di atas", "en": "Pause 1 second at the top" },
+      { "id": "Turun penuh di bawah", "en": "Full stretch at the bottom" }
+    ],
+    "variations": [],
+    "contraindications": ["ankle"], "tracking": "calf_raise", "loadable": true
+  },
+  {
+    "id": "dead_bug",
+    "name": { "id": "Dead Bug", "en": "Dead Bug" },
+    "description": { "id": "Latihan core telentang dengan gerakan tangan-kaki berlawanan.", "en": "Supine core drill with opposite arm–leg reaches." },
+    "zone": "functional", "pattern": "core", "animation": "dead_bug",
+    "primaryMuscles": ["abs"], "secondaryMuscles": ["obliques", "hip_flexors"],
+    "equipment": ["mat", "bodyweight"], "level": "beginner", "goals": ["endurance", "strength"],
+    "commonMistakes": [
+      { "id": "Punggung bawah terangkat dari lantai", "en": "Lower back lifting off the floor" },
+      { "id": "Bergerak terlalu cepat", "en": "Moving too fast" }
+    ],
+    "cues": [
+      { "id": "Tekan punggung bawah ke lantai", "en": "Press your lower back into the floor" },
+      { "id": "Hembuskan napas saat menjulurkan", "en": "Exhale as you extend" }
+    ],
+    "variations": ["bird_dog", "plank"],
+    "contraindications": []
+  },
+  {
+    "id": "bird_dog",
+    "name": { "id": "Bird Dog", "en": "Bird Dog" },
+    "description": { "id": "Dari posisi merangkak, julurkan tangan dan kaki berlawanan.", "en": "From all fours, extend the opposite arm and leg." },
+    "zone": "stretching", "pattern": "corrective", "animation": "bird_dog",
+    "primaryMuscles": ["lower_back", "glutes"], "secondaryMuscles": ["abs", "rear_delts"],
+    "equipment": ["mat", "bodyweight"], "level": "beginner", "goals": ["endurance"],
+    "commonMistakes": [
+      { "id": "Pinggul berputar", "en": "Hips rotating" },
+      { "id": "Punggung melengkung", "en": "Arching the back" }
+    ],
+    "cues": [
+      { "id": "Bayangkan segelas air di punggung", "en": "Imagine a glass of water on your back" },
+      { "id": "Gerak lambat dan terkontrol", "en": "Slow and controlled" }
+    ],
+    "variations": ["dead_bug", "side_plank"],
+    "contraindications": []
+  },
+  {
+    "id": "cat_cow",
+    "name": { "id": "Cat-Cow", "en": "Cat-Cow" },
+    "description": { "id": "Mobilisasi tulang belakang dengan fleksi dan ekstensi bergantian.", "en": "Spinal mobilization alternating flexion and extension." },
+    "zone": "stretching", "pattern": "mobility", "animation": "cat_cow",
+    "primaryMuscles": ["lower_back"], "secondaryMuscles": ["abs", "upper_back", "neck"],
+    "equipment": ["mat"], "level": "beginner", "goals": ["endurance"],
+    "commonMistakes": [
+      { "id": "Gerakan hanya di leher", "en": "Moving only the neck" },
+      { "id": "Terlalu cepat", "en": "Rushing" }
+    ],
+    "cues": [
+      { "id": "Gerak ruas demi ruas", "en": "Move segment by segment" },
+      { "id": "Ikuti napas", "en": "Follow your breath" }
+    ],
+    "variations": ["bird_dog"],
+    "contraindications": []
+  },
+  {
+    "id": "hip_90_90",
+    "name": { "id": "90/90 Hip Switch", "en": "90/90 Hip Switch" },
+    "description": { "id": "Membuka pinggul dengan rotasi internal & eksternal bergantian (hip opener).", "en": "Hip opener alternating internal & external rotation." },
+    "zone": "stretching", "pattern": "mobility", "animation": "hip_90_90",
+    "primaryMuscles": ["glutes", "hip_flexors"], "secondaryMuscles": ["adductors", "obliques"],
+    "equipment": ["mat"], "level": "beginner", "goals": ["endurance"],
+    "commonMistakes": [
+      { "id": "Badan membungkuk", "en": "Slouching" },
+      { "id": "Memaksakan rentang gerak", "en": "Forcing the range" }
+    ],
+    "cues": [
+      { "id": "Duduk tegak", "en": "Sit tall" },
+      { "id": "Putar lutut perlahan dari sisi ke sisi", "en": "Rotate knees slowly side to side" }
+    ],
+    "variations": ["goblet_squat"],
+    "contraindications": ["hip"]
+  },
+  {
+    "id": "toe_touch",
+    "name": { "id": "Standing Toe Touch", "en": "Standing Toe Touch" },
+    "description": { "id": "Membungkuk menjangkau ujung kaki untuk peregangan hamstring.", "en": "Bending forward to reach the toes, stretching the hamstrings." },
+    "zone": "stretching", "pattern": "mobility", "animation": "toe_touch",
+    "primaryMuscles": ["hamstrings"], "secondaryMuscles": ["lower_back", "calves"],
+    "equipment": ["bodyweight"], "level": "beginner", "goals": ["endurance"],
+    "commonMistakes": [
+      { "id": "Memantul-mantul", "en": "Bouncing" },
+      { "id": "Menahan napas", "en": "Holding your breath" }
+    ],
+    "cues": [
+      { "id": "Lutut sedikit lentur", "en": "Keep a soft bend in the knees" },
+      { "id": "Biarkan kepala menggantung rileks", "en": "Let the head hang relaxed" }
+    ],
+    "variations": ["romanian_deadlift"],
+    "contraindications": ["lower_back"]
+  },
+  {
+    "id": "chin_tuck",
+    "name": { "id": "Chin Tuck", "en": "Chin Tuck" },
+    "description": { "id": "Menarik dagu lurus ke belakang untuk memperbaiki forward head posture.", "en": "Drawing the chin straight back to address forward head posture." },
+    "zone": "stretching", "pattern": "corrective", "animation": "chin_tuck",
+    "primaryMuscles": ["neck"], "secondaryMuscles": ["upper_back"],
+    "equipment": ["bodyweight"], "level": "beginner", "goals": ["endurance"],
+    "commonMistakes": [
+      { "id": "Menunduk, bukan menarik ke belakang", "en": "Nodding down instead of gliding back" }
+    ],
+    "cues": [
+      { "id": "Buat 'dagu ganda'", "en": "Make a 'double chin'" },
+      { "id": "Tahan 3–5 detik", "en": "Hold 3–5 seconds" }
+    ],
+    "variations": ["wall_slide"],
+    "contraindications": []
+  },
+  {
+    "id": "wall_slide",
+    "name": { "id": "Wall Slide", "en": "Wall Slide" },
+    "description": { "id": "Menggeser lengan ke atas di dinding untuk mobilitas bahu dan postur.", "en": "Sliding the arms up a wall for shoulder mobility and posture." },
+    "zone": "stretching", "pattern": "corrective", "animation": "wall_slide",
+    "primaryMuscles": ["upper_back", "rear_delts"], "secondaryMuscles": ["side_delts"],
+    "equipment": ["bodyweight"], "level": "beginner", "goals": ["endurance"],
+    "commonMistakes": [
+      { "id": "Punggung bawah menjauhi dinding", "en": "Lower back arching off the wall" },
+      { "id": "Mengangkat bahu", "en": "Shrugging" }
+    ],
+    "cues": [
+      { "id": "Lengan bawah tetap menempel dinding", "en": "Keep forearms on the wall" },
+      { "id": "Bentuk huruf W lalu Y", "en": "Move from a W to a Y shape" }
+    ],
+    "variations": ["band_pull_apart", "chin_tuck"],
+    "contraindications": []
+  },
+  {
+    "id": "band_pull_apart",
+    "name": { "id": "Band Pull-Apart", "en": "Band Pull-Apart" },
+    "description": { "id": "Menarik resistance band ke samping untuk punggung atas dan bahu belakang.", "en": "Pulling a band apart to train the upper back and rear delts." },
+    "zone": "functional", "pattern": "corrective", "animation": "pull_apart",
+    "primaryMuscles": ["rear_delts", "upper_back"], "secondaryMuscles": [],
+    "equipment": ["band"], "level": "beginner", "goals": ["endurance", "hypertrophy"],
+    "commonMistakes": [
+      { "id": "Siku menekuk berlebihan", "en": "Bending elbows too much" },
+      { "id": "Tulang rusuk terangkat", "en": "Flaring ribs" }
+    ],
+    "cues": [
+      { "id": "Tarik tulang belikat bersama", "en": "Squeeze shoulder blades together" },
+      { "id": "Kontrol saat kembali", "en": "Control the return" }
+    ],
+    "variations": ["wall_slide", "dumbbell_row"],
+    "contraindications": []
+  }
+]
