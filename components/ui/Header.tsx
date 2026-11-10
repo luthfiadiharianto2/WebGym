@@ -32,9 +32,9 @@ export function Header() {
         {t("nav.skip")}
       </a>
       <div className="mx-auto flex h-14 max-w-7xl items-center gap-3 px-4">
-        <Link href="/" className="flex items-center gap-2 font-bold tracking-tight text-white" aria-label="IronVision 3D">
+        <Link href="/" className="flex items-center gap-2 font-bold tracking-tight text-white">
           <span aria-hidden className="grid h-7 w-7 place-items-center rounded-lg bg-lime-400 text-xs font-black text-black">IV</span>
-          <span className="hidden sm:inline">
+          <span className="sr-only sm:not-sr-only">
             IronVision<span className="text-lime-400"> 3D</span>
           </span>
         </Link>
@@ -133,7 +133,7 @@ export function Footer() {
   const { t } = useT();
   const user = useAuth((s) => s.user);
   return (
-    <footer className="mt-16 border-t border-white/10 py-8 text-center text-xs text-zinc-500">
+    <footer className="mt-16 border-t border-white/10 py-8 text-center text-xs text-zinc-400">
       <p className="mx-auto max-w-2xl px-4">⚕ {t("disclaimer.short")}</p>
       {!user && <p className="mt-2">{t("common.guestMode")}</p>}
       <p className="mt-2">© {new Date().getFullYear()} IronVision 3D</p>

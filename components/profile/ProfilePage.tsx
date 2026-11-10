@@ -49,7 +49,7 @@ export default function ProfilePage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loading, data.profile, user]);
 
-  if (!form) return <div className="mx-auto max-w-3xl px-4 py-10 text-zinc-500">{t("common.loading")}</div>;
+  if (!form) return <div className="mx-auto max-w-3xl px-4 py-10 text-zinc-400">{t("common.loading")}</div>;
   const onboarding = !data.profile?.onboardedAt;
   const set = <K extends keyof Profile>(k: K, v: Profile[K]) => setForm({ ...form, [k]: v });
   const toggle = <T extends string>(list: T[], v: T) => (list.includes(v) ? list.filter((x) => x !== v) : [...list, v]);

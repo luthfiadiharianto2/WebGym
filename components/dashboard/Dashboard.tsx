@@ -9,6 +9,8 @@ import { exerciseTrend, muscleLoad, personalRecords, setsToCSV, weekSummary } fr
 import { useT } from "@/lib/store/settings";
 import { useUserData } from "@/lib/useUserData";
 import { MUSCLES, type Muscle, type PostureAssessment } from "@/lib/types";
+import type { Repository } from "@/lib/data/repository";
+import { LazyMount } from "@/components/ui/LazyMount";
 
 const TrendChart = dynamic(() => import("./Charts"), { ssr: false, loading: () => <div className="h-60 animate-pulse rounded-xl bg-zinc-900" /> });
 const AvatarViewer = dynamic(() => import("@/components/3d/AvatarViewer"), { ssr: false, loading: () => <div className="h-80 animate-pulse rounded-2xl bg-zinc-900" /> });
@@ -44,7 +46,7 @@ export default function Dashboard() {
   }, [load]);
   const fmtDate = (iso: string) => new Date(iso).toLocaleDateString(locale, { day: "numeric", month: "short" });
 
-  if (loading) return <div className="mx-auto max-w-7xl px-4 py-10 text-zinc-500">{t("common.loading")}</div>;
+  if (loading) return <div className="mx-auto max-w-7xl px-4 py-10 text-zinc-400">{t("common.loading")}</div>;
   const empty = sessions.length === 0 && posture.length === 0 && mobility.length === 0;
 
   const stat = (label: string, value: string) => (
@@ -58,7 +60,7 @@ export default function Dashboard() {
     <div className="mx-auto max-w-7xl px-4 py-8">
       <h1 className="text-3xl font-bold text-white">
         {t("dash.title")}
-        {data.profile?.displayName ? <span className="text-zinc-500"> · {data.profile.displayName}</span> : null}
+        {data.profile?.displayName ? <span className="text-zinc-400"> · {data.profile.displayName}</span> : null}
       </h1>
 
       {empty && (
@@ -147,10 +149,10 @@ export default function Dashboard() {
             🏆 {t("dash.prs")}
           </h2>
           {prs.length === 0 ? (
-            <p className="mt-3 text-sm text-zinc-500">{t("dash.noPR")}</p>
+            <p className="mt-3 text-sm text-zinc-400">{t("dash.noPR")}</p>
           ) : (
             <table className="mt-3 w-full text-left text-sm">
-              <thead className="text-xs text-zinc-500">
+              <thead className="text-xs text-zinc-400">
                 <tr>
                   <th scope="col" className="py-1">{t("dash.exercise")}</th>
                   <th scope="col">{t("dash.bestSet")}</th>
@@ -170,23 +172,29 @@ export default function Dashboard() {
               </tbody>
             </table>
           )}
-          <p className="mt-2 text-xs text-zinc-500">{t("dash.prs.note")}</p>
+          <p className="mt-2 text-xs text-zinc-400">{t("dash.prs.note")}</p>
         </section>
 
         <section className="card" aria-labelledby="heat-title">
           <h2 id="heat-title" className="font-semibold text-white">
             {t("dash.heatmap")}
           </h2>
+          {sets.length === 0 ? (
+            <p className="mt-3 grid h-40 place-items-center rounded-2xl border border-dashed border-white/10 text-sm text-zinc-400">{t("dash.heatmap.empty")}</p>
+          ) : (
+          <LazyMount className="mt-3 h-80" rootMargin="0px">
           <AvatarViewer
             animation="calf_raise"
             playing={false}
             staticPhase={0}
             showProp={false}
-            autoRotate
+            frameloop="demand"
             colors={heat}
-            className="mt-3 h-80"
+            className="h-80"
             label={`${t("dash.heatmap")}: ${MUSCLES.map((m) => `${t(`muscle.${m}`)} ${load[m] ?? 0}`).join(", ")}`}
           />
+          </LazyMount>
+          )}
           <div className="mt-2 flex items-center gap-2 text-xs text-zinc-400" aria-hidden>
             {t("dash.heatmap.rare")}
             <span className="h-2 flex-1 rounded-full" style={{ background: `linear-gradient(90deg, ${heatColor(0)}, ${heatColor(0.33)}, ${heatColor(0.66)}, ${heatColor(1)})` }} />
@@ -195,18 +203,18 @@ export default function Dashboard() {
         </section>
       </div>
 
-      <CompareScans posture={posture} />
+      <CompareScans posture={posture} repo={repo} />
 
       <section className="card mt-4" aria-labelledby="hist-title">
         <h2 id="hist-title" className="font-semibold text-white">
           {t("dash.history")}
         </h2>
         {sessions.length === 0 ? (
-          <p className="mt-2 text-sm text-zinc-500">—</p>
+          <p className="mt-2 text-sm text-zinc-400">—</p>
         ) : (
           <div className="mt-3 overflow-x-auto">
             <table className="w-full min-w-[560px] text-left text-sm">
-              <thead className="text-xs text-zinc-500">
+              <thead className="text-xs text-zinc-400">
                 <tr>
                   <th scope="col" className="py-1">{t("dash.date")}</th>
                   <th scope="col">{t("dash.exercise")}</th>
@@ -257,7 +265,7 @@ function mergeByDate(...lists: Record<string, string | number>[][]) {
   return [...map.values()];
 }
 
-function CompareScans({ posture }: { posture: PostureAssessment[] }) {
+function CompareScans({ posture, repo }: { posture: PostureAssessment[]; repo: Repository | null }) {
   const { t, locale } = useT();
   const [a, setA] = useState(0);
   const [b, setB] = useState(Math.max(0, posture.length - 1));
@@ -282,7 +290,7 @@ function CompareScans({ posture }: { posture: PostureAssessment[] }) {
         {t("dash.compare")}
       </h2>
       {posture.length < 2 ? (
-        <p className="mt-2 text-sm text-zinc-500">{t("dash.compare.empty")}</p>
+        <p className="mt-2 text-sm text-zinc-400">{t("dash.compare.empty")}</p>
       ) : (
         <>
           <div className="mt-3 grid gap-3 sm:grid-cols-2">
@@ -313,7 +321,7 @@ function CompareScans({ posture }: { posture: PostureAssessment[] }) {
                     </th>
                     <td className="font-mono text-zinc-300">{va ?? "—"}</td>
                     <td className="font-mono text-zinc-100">{vb ?? "—"}</td>
-                    <td className={`font-mono ${d === null || d === 0 ? "text-zinc-500" : good ? "text-lime-300" : "text-red-300"}`}>
+                    <td className={`font-mono ${d === null || d === 0 ? "text-zinc-400" : good ? "text-lime-300" : "text-red-300"}`}>
                       {d === null ? "" : `${d > 0 ? "+" : ""}${d}`}
                     </td>
                   </tr>
@@ -321,9 +329,46 @@ function CompareScans({ posture }: { posture: PostureAssessment[] }) {
               })}
             </tbody>
           </table>
+          {(pa?.photoPath || pb?.photoPath) && <PhotoPair repo={repo} before={pa?.photoPath ?? null} after={pb?.photoPath ?? null} />}
         </>
       )}
     </section>
+  );
+}
+
+/** Foto progres sebelum/sesudah: URL bertanda tangan berumur pendek dari Storage privat. */
+function PhotoPair({ repo, before, after }: { repo: Repository | null; before: string | null; after: string | null }) {
+  const { t } = useT();
+  const [urls, setUrls] = useState<[string | null, string | null]>([null, null]);
+  useEffect(() => {
+    if (!repo) return;
+    let alive = true;
+    Promise.all([before ? repo.getPhotoUrl(before) : null, after ? repo.getPhotoUrl(after) : null])
+      .then((u) => alive && setUrls([u[0], u[1]]))
+      .catch(() => {});
+    return () => {
+      alive = false;
+    };
+  }, [repo, before, after]);
+  const img = (url: string | null, label: string) => (
+    <figure className="overflow-hidden rounded-xl border border-white/10 bg-black">
+      {url ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img src={url} alt={`${t("dash.compare.photo")} — ${label}`} className="aspect-[3/4] w-full object-cover" />
+      ) : (
+        <div className="grid aspect-[3/4] place-items-center text-xs text-zinc-400">{t("dash.compare.noPhoto")}</div>
+      )}
+      <figcaption className="px-2 py-1 text-center text-xs text-zinc-400">{label}</figcaption>
+    </figure>
+  );
+  return (
+    <div className="mt-4" data-testid="photo-compare">
+      <h3 className="text-sm font-semibold text-zinc-200">{t("dash.compare.photo")}</h3>
+      <div className="mt-2 grid grid-cols-2 gap-3">
+        {img(urls[0], t("dash.compare.before"))}
+        {img(urls[1], t("dash.compare.after"))}
+      </div>
+    </div>
   );
 }
 

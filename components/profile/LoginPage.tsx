@@ -58,7 +58,7 @@ export default function LoginPage() {
         <button type="button" className="btn-secondary w-full" disabled={busy} onClick={() => run(() => sb.auth.signInWithOAuth({ provider: "google", options: { redirectTo: redirect() } }))}>
           G · {t("auth.google")}
         </button>
-        <p className="text-center text-xs text-zinc-500">— {t("auth.or")} —</p>
+        <p className="text-center text-xs text-zinc-400">— {t("auth.or")} —</p>
         <form
           className="space-y-3"
           onSubmit={(e) => {
@@ -100,7 +100,7 @@ export default function LoginPage() {
             {msg.text}
           </p>
         )}
-        <Link href="/profile" className="block text-center text-xs text-zinc-500 underline">
+        <Link href="/profile" className="block text-center text-xs text-zinc-400 underline">
           {t("auth.continueGuest")}
         </Link>
       </div>

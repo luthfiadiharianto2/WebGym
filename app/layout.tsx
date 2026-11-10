@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen">
         <Providers>
           <Header />
-          <main id="main" tabIndex={-1} className="outline-none">
+          <main id="main" tabIndex={-1} className="min-h-[calc(100vh-3.5rem)] outline-none">
             {children}
           </main>
           <Footer />

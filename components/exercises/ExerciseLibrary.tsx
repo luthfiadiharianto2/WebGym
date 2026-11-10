@@ -100,7 +100,7 @@ export default function ExerciseLibrary() {
                     </span>
                   ))}
                 </div>
-                <div className="mt-3 flex flex-wrap items-center gap-2 text-xs text-zinc-500">
+                <div className="mt-3 flex flex-wrap items-center gap-2 text-xs text-zinc-400">
                   <span>{e.equipment.map((q) => t(`equipment.${q}`)).join(" · ")}</span>
                   {e.tracking && <span className="chip border-cyan-400/30 text-cyan-300">◎ {t("ex.trackable")}</span>}
                 </div>

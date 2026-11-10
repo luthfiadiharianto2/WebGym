@@ -103,7 +103,7 @@ export default function Landing() {
                 <div className="h-1.5 overflow-hidden rounded-full bg-white/10">
                   <div className="h-full bg-gradient-to-r from-lime-400 to-cyan-400 transition-all" style={{ width: `${loadPct}%` }} />
                 </div>
-                <p className="mt-2 font-mono text-xs text-zinc-500">{Math.round(loadPct)}%</p>
+                <p className="mt-2 font-mono text-xs text-zinc-400">{Math.round(loadPct)}%</p>
               </div>
             </div>
           )}
@@ -127,8 +127,8 @@ export default function Landing() {
                   {t("home.cta.explore")}
                 </Link>
               </div>
-              {mode === "fallback" && <p className="mt-4 text-xs text-zinc-500">{t("home.fallback")}</p>}
-              <p className="mt-6 text-xs text-zinc-500" aria-hidden>
+              {mode === "fallback" && <p className="mt-4 text-xs text-zinc-400">{t("home.fallback")}</p>}
+              <p className="mt-6 text-xs text-zinc-400" aria-hidden>
                 ↓ {t("home.scrollHint")}
               </p>
             </div>

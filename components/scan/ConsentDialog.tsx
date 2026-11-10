@@ -44,7 +44,7 @@ export function ConsentDialog({ onDecide, onDemo }: { onDecide: (granted: boolea
             </li>
           ))}
         </ul>
-        <p className="mt-4 text-xs text-zinc-500">⚕ {t("disclaimer.short")}</p>
+        <p className="mt-4 text-xs text-zinc-400">⚕ {t("disclaimer.short")}</p>
         <div className="mt-5 flex flex-wrap gap-2">
           <button ref={acceptRef} type="button" className="btn-primary" onClick={() => onDecide(true)}>
             {t("scan.consent.accept")}

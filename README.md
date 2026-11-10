@@ -37,7 +37,7 @@ Buka http://localhost:3000. **Tanpa konfigurasi apa pun aplikasi berjalan penuh 
 | `npm run build` / `npm start` | Build & jalankan produksi |
 | `npm run typecheck` | Pemeriksaan TypeScript |
 | `npm test` | Unit test Vitest (pose engine dengan landmark sintetis, rekomendasi, statistik, skema) |
-| `npm run test:e2e` | E2E Playwright (pertama kali: `npx playwright install chromium`) |
+| `npm run test:e2e` | E2E Playwright + axe-core (pertama kali: `npx playwright install chromium`) |
 | `npm run models:download` | Unduh model pose lite & full ke `public/models` |
 | `npm run db:seed-sql` | Regenerasi `supabase/seed.sql` dari `data/exercises.json` |
 
@@ -108,6 +108,18 @@ Semua aset 3D saat ini **prosedural** (dibangun dari primitif) agar proyek bisa 
 - Frame berkualitas rendah (tubuh tidak utuh, terlalu dekat/jauh, visibilitas rendah) tidak diproses untuk penghitungan.
 - 3D: lazy-load scene & avatar (`next/dynamic`, `ssr: false`), instancing untuk dumbel/kettlebell/matras, `PerformanceMonitor` menurunkan DPR, mematikan bayangan & postprocessing saat FPS turun; perangkat lemah/tanpa WebGL mendapat gambar statis (`?lite` untuk memaksa).
 - Halaman non-3D tidak memuat three.js; Recharts di-lazy-load.
+
+## Hasil pengujian terakhir
+
+| Uji | Hasil |
+|---|---|
+| Unit (Vitest) | 46 lulus — pose engine (landmark sintetis), rekomendasi, statistik, skema Zod, LocalRepository, pemetaan & kepemilikan data SupabaseRepository (klien palsu) |
+| E2E (Playwright, Chromium) | 19 lulus — alur utama, mode demo scan → dashboard, consent kamera, hapus data, rotasi avatar via keyboard, axe-core WCAG 2.1 AA (8 halaman, 0 pelanggaran serius/kritis) |
+| Inferensi nyata | MediaPipe Pose (lite) berjalan di **Web Worker + GPU delegate** dengan kamera palsu Chromium: 18–38 FPS di laptop pengembang (headless, bervariasi dengan beban mesin) |
+| Lighthouse (mobile, build produksi) | Performance: `/dashboard` 83, `/exercises` 89, `/plan` 88, `/profile` 87, `/login` 88 · Accessibility 100 · CLS 0 |
+| RLS Supabase (anon key) | Katalog `exercises` terbaca; `profiles` orang lain tidak terlihat; insert anon ke tabel pengguna/katalog ditolak (401) |
+
+Belum diuji otomatis: login dengan akun Supabase sungguhan, dan akurasi hitung rep dengan orang sungguhan di depan kamera.
 
 ## Keterbatasan (jujur)
 

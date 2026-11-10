@@ -179,7 +179,7 @@ export default function Assessment() {
             {t("assess.photo.optin")}
           </label>
         ) : (
-          <p className="text-xs text-zinc-500">📷 {t("assess.photo.guest")}</p>
+          <p className="text-xs text-zinc-400">📷 {t("assess.photo.guest")}</p>
         )}
         <button type="button" className="btn-primary" onClick={begin} disabled={!scan.running} data-testid="assess-begin">
           ▶ {t("common.start")}
@@ -251,7 +251,7 @@ export default function Assessment() {
                 {p.proportions.shoulderToWaist && <Row k={t("assess.ratio.sw")} v={String(p.proportions.shoulderToWaist)} />}
                 {p.proportions.waistToHip && <Row k={t("assess.ratio.wh")} v={String(p.proportions.waistToHip)} />}
               </dl>
-              <p className="mt-2 text-xs text-zinc-500">ⓘ {t("assess.proportions.note")}</p>
+              <p className="mt-2 text-xs text-zinc-400">ⓘ {t("assess.proportions.note")}</p>
             </div>
           )}
         </section>
@@ -276,7 +276,7 @@ export default function Assessment() {
           </ul>
         </section>
       )}
-      <p className="text-xs text-zinc-500">⚕ {t("disclaimer.short")}</p>
+      <p className="text-xs text-zinc-400">⚕ {t("disclaimer.short")}</p>
       <div className="flex flex-wrap gap-2">
         <button type="button" className="btn-primary" onClick={save} disabled={saving || saved || (!p && !m)} data-testid="assess-save">
           💾 {t("assess.save")}

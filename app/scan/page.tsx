@@ -9,7 +9,7 @@ const ScanPage = dynamic(() => import("@/components/scan/ScanPage"));
 
 export default function Page() {
   return (
-    <Suspense fallback={<div className="mx-auto max-w-7xl px-4 py-10 text-zinc-500">…</div>}>
+    <Suspense fallback={<div className="mx-auto max-w-7xl px-4 py-10 text-zinc-400">…</div>}>
       <ScanPage />
     </Suspense>
   );

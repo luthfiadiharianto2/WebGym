@@ -44,7 +44,7 @@ export default function ExerciseDetail({ exercise }: { exercise: Exercise }) {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8">
-      <nav aria-label="breadcrumb" className="text-sm text-zinc-500">
+      <nav aria-label="breadcrumb" className="text-sm text-zinc-400">
         <Link href="/exercises" className="hover:text-lime-300">
           {t("ex.title")}
         </Link>{" "}
@@ -69,7 +69,7 @@ export default function ExerciseDetail({ exercise }: { exercise: Exercise }) {
               <input type="range" min={0.25} max={2} step={0.25} value={speed} onChange={(e) => setSpeed(Number(e.target.value))} aria-valuetext={`${speed}×`} />
               <span className="w-10 font-mono text-xs">{speed}×</span>
             </label>
-            <p className="text-xs text-zinc-500">↻ {t("ex.rotateHint")}</p>
+            <p className="text-xs text-zinc-400">↻ {t("ex.rotateHint")}</p>
             <div className="ml-auto flex gap-3 text-xs text-zinc-400">
               <span className="flex items-center gap-1">
                 <span aria-hidden className="h-3 w-3 rounded-full" style={{ background: PRIMARY_COLOR }} /> {t("ex.legend.primary")}
@@ -97,15 +97,15 @@ export default function ExerciseDetail({ exercise }: { exercise: Exercise }) {
           </header>
           <section className="card text-sm">
             <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2">
-              <dt className="text-zinc-500">{t("ex.primary")}</dt>
+              <dt className="text-zinc-400">{t("ex.primary")}</dt>
               <dd className="text-lime-200">{exercise.primaryMuscles.map((m) => t(`muscle.${m}`)).join(", ")}</dd>
-              <dt className="text-zinc-500">{t("ex.secondary")}</dt>
+              <dt className="text-zinc-400">{t("ex.secondary")}</dt>
               <dd className="text-cyan-200">{exercise.secondaryMuscles.map((m) => t(`muscle.${m}`)).join(", ") || "—"}</dd>
-              <dt className="text-zinc-500">{t("ex.equipment")}</dt>
+              <dt className="text-zinc-400">{t("ex.equipment")}</dt>
               <dd>{exercise.equipment.map((q) => t(`equipment.${q}`)).join(", ")}</dd>
               {exercise.contraindications.length > 0 && (
                 <>
-                  <dt className="text-zinc-500">{t("ex.avoidFor")}</dt>
+                  <dt className="text-zinc-400">{t("ex.avoidFor")}</dt>
                   <dd className="text-orange-300">{exercise.contraindications.map((i) => t(`injury.${i}`)).join(", ")}</dd>
                 </>
               )}
@@ -135,7 +135,7 @@ export default function ExerciseDetail({ exercise }: { exercise: Exercise }) {
                 </li>
               ) : null;
             })}
-            {exercise.variations.length === 0 && <li className="text-sm text-zinc-500">—</li>}
+            {exercise.variations.length === 0 && <li className="text-sm text-zinc-400">—</li>}
           </ul>
         </section>
       </div>

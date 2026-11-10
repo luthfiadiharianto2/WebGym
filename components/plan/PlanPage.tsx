@@ -76,7 +76,7 @@ export default function PlanPage() {
     }
   };
 
-  if (loading) return <div className="mx-auto max-w-7xl px-4 py-10 text-zinc-500">{t("common.loading")}</div>;
+  if (loading) return <div className="mx-auto max-w-7xl px-4 py-10 text-zinc-400">{t("common.loading")}</div>;
 
   if (!data.profile) {
     return (
@@ -108,7 +108,7 @@ export default function PlanPage() {
           </button>
         </div>
       </div>
-      <p className="mt-2 text-xs text-zinc-500">ⓘ {t("plan.llmNote")}</p>
+      <p className="mt-2 text-xs text-zinc-400">ⓘ {t("plan.llmNote")}</p>
       {llmState === "failed" && (
         <p role="status" className="mt-3 rounded-xl bg-yellow-500/10 px-3 py-2 text-sm text-yellow-200">
           {t("plan.llmUnavailable")}
@@ -183,7 +183,7 @@ export default function PlanPage() {
           </div>
         </>
       )}
-      <p className="mt-6 text-xs text-zinc-500">⚕ {t("disclaimer.short")}</p>
+      <p className="mt-6 text-xs text-zinc-400">⚕ {t("disclaimer.short")}</p>
     </div>
   );
 }

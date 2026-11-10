@@ -339,7 +339,7 @@ export default function ScanPage() {
             {tab === "track" ? <LiveTracking /> : <Assessment />}
           </div>
         </div>
-        <p className="mt-6 text-xs text-zinc-500">⚕ {t("disclaimer.short")}</p>
+        <p className="mt-6 text-xs text-zinc-400">⚕ {t("disclaimer.short")}</p>
       </div>
       {showConsent && <ConsentDialog onDecide={onConsent} onDemo={() => { setShowConsent(false); setSource("demo"); }} />}
     </ScanContext.Provider>
