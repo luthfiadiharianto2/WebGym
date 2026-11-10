@@ -11,3 +11,7 @@ test-results
 playwright-report
 .claude/
 *.log
+
+.vercel
+.env*
+!.env.example
